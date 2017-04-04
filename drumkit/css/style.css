@@ -3,9 +3,12 @@
     border: 2px solid darkgray;
     height: 40px;
     width: 40px;
+    border-radius: 50px;
     text-align: center;
     vertical-align: middle;
     line-height: 40px;
+    box-shadow: 2px;
+    box-shadow: 4px 5px 12px #888888;
 }
 
 .row {
