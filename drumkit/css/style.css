@@ -1,0 +1,10 @@
+.drum-key {
+    display: inline-block;
+    border: 2px solid darkgray;
+    height: 40px;
+    width: 40px;
+}
+
+.row {
+    text-align: center;
+}
