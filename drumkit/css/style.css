@@ -14,3 +14,8 @@
 .row {
     text-align: center;
 }
+
+.playing {
+    transform: scale(1.1);
+    border: yellow;
+}
