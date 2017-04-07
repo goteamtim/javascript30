@@ -10,7 +10,7 @@ body {
     border-radius: 50px;
     text-align: center;
     vertical-align: middle;
-    line-height: 90px;
+    /*line-height: 90px;*/
     box-shadow: 2px;
     box-shadow: 4px 5px 12px rgba(88, 153, 226, 1);
     background: rgba(51, 92, 129, 1);

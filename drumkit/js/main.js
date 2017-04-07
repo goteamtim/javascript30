@@ -12,7 +12,7 @@
     };
 
     function playSound(){
-        var audio = new Audio('./sounds/snare.wav');
+        var audio = new Audio('./sounds/ride.wav');
         audio.play();
     }
 
