@@ -18,6 +18,14 @@ body {
         font-size: x-large;
 }
 
+.drum-name {
+        font-size: small;
+}
+
+.drum-key-letter {
+    padding-top: 19px;
+}
+
 .row {
     text-align: center;
     margin-top: 25%;
