@@ -3,11 +3,12 @@ var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
 // Static server
-gulp.task('browser-sync', function() {
+gulp.task('test', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./drumkit"
         }
     });
-    gulp.watch("/drumkit").on('change',reload);
+    
+    gulp.watch("/drumkit/*.*").on('change',reload);
 });
