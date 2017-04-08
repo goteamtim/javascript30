@@ -12,7 +12,7 @@
     }
 
     function playSound(key){
-        var audio = new Audio('./sounds/ride.wav');
+        var audio = new Audio('./sounds/' + key +'.wav');
         audio.play();
     }
 
