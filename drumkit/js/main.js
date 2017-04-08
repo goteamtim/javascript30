@@ -11,7 +11,7 @@
         });
     }
 
-    function playSound(){
+    function playSound(key){
         var audio = new Audio('./sounds/ride.wav');
         audio.play();
     }
