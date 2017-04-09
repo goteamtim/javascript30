@@ -2,19 +2,23 @@
     var keys = Array.from(document.querySelectorAll('.drum-key'));
     var keysArray = [].slice.call(keys);
     var soundFiles = {
-        65: 'clap.wav',
-        83: 'hihat.wav',
-        68: 'kick.wav',
-        70: 'openhat.wav',
-        71: 'boom.wav',
-        72: 'ride.wav',
-        74: 'snare.wav',
-        75: 'tom.wav',
-        76: 'tink.wav',
+        97: 'clap.wav',
+        115: 'hihat.wav',
+        100: 'kick.wav',
+        102: 'openhat.wav',
+        103: 'boom.wav',
+        104: 'ride.wav',
+        106: 'snare.wav',
+        107: 'tom.wav',
+        108: 'tink.wav',
     };
 
     document.onkeypress = function (e) {
         e = e || window.event;
+        console.log("Key pressed: " + e.keyCode)
+        if(soundFiles.hasOwnProperty(e.keyCode)){
+            playSound(e.keyCode);
+        }
     };
 
 
