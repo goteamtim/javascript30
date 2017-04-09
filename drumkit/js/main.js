@@ -1,29 +1,33 @@
-(function(){
+(function () {
     var keys = Array.from(document.querySelectorAll('.drum-key'));
     var keysArray = [].slice.call(keys);
     var soundFiles = {
-        "A": 'clap.wav',
-        "S": 'hihat.wav',
-        "D": 'kick.wav',
-        "F": 'openhat.wav',
-        "G": 'boom.wav',
-        "H": 'ride.wav',
-        "J": 'snare.wav',
-        "K": 'tom.wav',
-        "L": 'tink.wav',
+        65: 'clap.wav',
+        83: 'hihat.wav',
+        68: 'kick.wav',
+        70: 'openhat.wav',
+        71: 'boom.wav',
+        72: 'ride.wav',
+        74: 'snare.wav',
+        75: 'tom.wav',
+        76: 'tink.wav',
     };
-    
-    //add an event listener to the divs
-    //create function that adds the playing class then plays the sound and removes the class when finished
+
+    document.onkeypress = function (e) {
+        e = e || window.event;
+    };
+
+
     keysArray.forEach(addListener);
-    function addListener(element){
-        element.addEventListener('click',function(){
-            playSound();
+    function addListener(element) {
+        element.addEventListener('click', function () {
+            //debugger;
+            playSound(this.dataset.key);
         });
     }
 
-    function playSound(key){
-        var audio = new Audio('./sounds/' + key +'.wav');
+    function playSound(key) {
+        var audio = new Audio('./sounds/' + soundFiles[key]);
         audio.play();
     }
 
