@@ -15,9 +15,12 @@
 
     document.onkeypress = function (e) {
         e = e || window.event;
-        console.log("Key pressed: " + e.keyCode)
-        if(soundFiles.hasOwnProperty(e.keyCode)){
+        if (soundFiles.hasOwnProperty(e.keyCode)) {
+            
+            var element = document.querySelector('div[data-key=\"' + e.keyCode + '\"]');
             playSound(e.keyCode);
+            //debugger;
+            manipulateClasses(element);
         }
     };
 
@@ -27,7 +30,21 @@
         element.addEventListener('click', function () {
             //debugger;
             playSound(this.dataset.key);
+            manipulateClasses(this);
+
         });
+    }
+
+    function manipulateClasses(element) {
+        console.log('tyopeof element: ' + typeof(element));
+        console.log(element);
+        element.classList.add('playing');
+
+        setTimeout(removeClass(element), 100);
+
+        function removeClass(e) {
+            e.classList.remove('playing');
+        }
     }
 
     function playSound(key) {

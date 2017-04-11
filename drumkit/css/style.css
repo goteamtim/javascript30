@@ -12,6 +12,7 @@ body {
     vertical-align: middle;
     /*line-height: 90px;*/
     box-shadow: 2px;
+    transition: all 1s;
     box-shadow: 4px 5px 12px rgba(88, 153, 226, 1);
     background: rgba(51, 92, 129, 1);
     margin: 10px 10px;
@@ -33,5 +34,5 @@ body {
 
 .playing {
     transform: scale(1.1);
-    border: yellow;
+    border: 2px solid rgba(101, 43, 255, 1);
 }
