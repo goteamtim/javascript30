@@ -16,7 +16,7 @@
     document.onkeypress = function (e) {
         e = e || window.event;
         if (soundFiles.hasOwnProperty(e.keyCode)) {
-            
+
             var element = document.querySelector('div[data-key=\"' + e.keyCode + '\"]');
             playSound(e.keyCode);
             //debugger;
@@ -36,15 +36,10 @@
     }
 
     function manipulateClasses(element) {
-        console.log('tyopeof element: ' + typeof(element));
-        console.log(element);
         element.classList.add('playing');
-
-        setTimeout(removeClass(element), 100);
-
-        function removeClass(e) {
-            e.classList.remove('playing');
-        }
+        setTimeout(function (element) {
+            element.classList.remove('playing');
+        }, 3000, element);
     }
 
     function playSound(key) {
