@@ -37,9 +37,7 @@
 
     function manipulateClasses(element) {
         element.classList.add('playing');
-        setTimeout(function (element) {
-            element.classList.remove('playing');
-        }, 3000, element);
+        
     }
 
     function playSound(key) {
