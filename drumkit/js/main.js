@@ -18,17 +18,17 @@
         if (soundFiles.hasOwnProperty(e.keyCode)) {
 
             var element = document.querySelector('div[data-key=\"' + e.keyCode + '\"]');
+            element.addEventListener('transitionend', function () { this.classList.remove('playing') });
             playSound(e.keyCode);
-            //debugger;
             manipulateClasses(element);
         }
     };
 
-
     keysArray.forEach(addListener);
+
     function addListener(element) {
         element.addEventListener('click', function () {
-            //debugger;
+            this.addEventListener('transitionend', function () { this.classList.remove('playing') });
             playSound(this.dataset.key);
             manipulateClasses(this);
 
@@ -37,7 +37,7 @@
 
     function manipulateClasses(element) {
         element.classList.add('playing');
-        
+
     }
 
     function playSound(key) {
