@@ -6,7 +6,7 @@ var reload      = browserSync.reload;
 gulp.task('test', function() {
     browserSync.init({
         server: {
-            baseDir: "./drumkit"
+            baseDir: "./"
         }
     });
     
