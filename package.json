@@ -1,0 +1,28 @@
+{
+  "name": "javascript30",
+  "version": "1.0.0",
+  "description": "Working files for the javascript30.com site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.18.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goteamtim/javascript30.git"
+  },
+  "keywords": [
+    "javascript",
+    "javascript30"
+  ],
+  "author": "Tim Harshman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goteamtim/javascript30/issues"
+  },
+  "homepage": "https://github.com/goteamtim/javascript30#readme"
+}
