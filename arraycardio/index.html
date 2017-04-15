@@ -33,6 +33,7 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    //Perform the function and filter out the results based on the function.  This returns a new filtered array
     var fifteenHundreds = inventors.filter((item) => {
       return item.year < 1600 && item.year > 1499;
     })
@@ -40,6 +41,7 @@
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+    //This maps the entire array and returns a new array with the manipulated data
     var mappedNames = inventors.map((inventor) => {
       return inventor.first + " " + inventor.last;
     });
@@ -48,6 +50,7 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    //Sorts the called on array by your sorting algorithm
     var sortedBirthdays = inventors.sort((a, b) => {
       return a.year - b.year;
     });
@@ -56,6 +59,7 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+    //reduces the array to one value?  Is this always the use case?  Need to look into this more.
     var reduced = inventors.reduce((accumulator, value) => {
       return accumulator + (value.passed-value.year);
     }, 0)
@@ -76,6 +80,11 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    var sortedByLastName = inventors.sort((inventor) => {
+      return inventor.last;
+    });
+    console.log("Sorted By last name")
+    console.log(sortedByLastName)
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
