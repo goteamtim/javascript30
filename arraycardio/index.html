@@ -80,10 +80,18 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    var sortedByLastName = inventors.sort((inventor) => {
-      return inventor.last;
+    var sortedByLastName = inventors.sort((inventor, b) => {
+      //return inventor.last - b.last;
+      if(inventor.last < b.last){
+        return -1;
+      }
+      if(inventor.last > b.last){
+        return 1;
+      }
+      return 0;
+
     });
-    console.log("Sorted By last name")
+    console.log("Sorted By last name!")
     console.log(sortedByLastName)
 
     // 8. Reduce Exercise
